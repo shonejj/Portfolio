@@ -1,49 +1,185 @@
-/* styles.css */
-body {
-    font-family: Arial, sans-serif;
+ /* Resetting some default styles */
+ /* * {
     margin: 0;
     padding: 0;
-    background-color: #1f1f1f;
-    color: #fff;
-  }
-  
-  header {
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    background-color: #111; 
+    box-sizing: border-box;
+  } */
 
+  html, body {
+    margin: 0;
+    padding: 0;
+    background: #2c2f34;
+    font-family: Arial, sans-serif; /* Adding a default font for better readability */
   }
-  
-  nav ul {
-    list-style: none;
+  /* Custom styles */
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #111;
+    color: #eee;
+    line-height: 1.6;
+    margin: 0;
     padding: 0;
   }
-  
-  nav ul li {
+  /* Header styles */
+  header {
+    background-color: #222;
+    color: #eee;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 999;
+  }
+  header ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  header ul li {
     display: inline;
     margin-right: 20px;
   }
-  
-  nav ul li a {
-    color: #fff;
+  header ul li a {
+    color: #eee;
     text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
   }
-  
-  section {
+  header ul li a:hover {
+    color: #ccc;
+  }
+  /* Hero section styles */
+  .hero {
+    position: relative;
+    height: 500px;
+    background-image: url('herobg.svg');
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #eee;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    margin-bottom: 30px;
+    filter: grayscale(100%);
+  }
+  .hero:hover{
+    filter: grayscale(0%);
+  }
+  .hero h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+  }
+  .hero p {
+    font-size: 1.2em;
+  }
+
+  .content {
+    width: 100%;
+    max-width: 90%; /* Adjusted the max-width for better responsiveness */
+    margin: auto;
+    padding: 40px 10px; /* Added some padding for smaller screens */
+    box-sizing: border-box; /* Ensure padding is included in width */
+    color: aliceblue;
+  }
+  .hero-back {
+    width: 100%;
+    height: 50vh; /* Changed height to 50vh for better visibility */
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.9) 100%), url('bg1.png') no-repeat 50% 50%;
+    position: relative;
+    overflow: hidden; /* Ensure the image doesn't overflow */
+  }
+  .hero-back img {
+    width: auto;
+    height: 100%;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto; /* Center the image */
+  }
+  main {
     padding: 20px;
-    margin: 20px 0;
-    background-color: #fff;
   }
   .card {
     background-color: #333;
-    color: #fff;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
   }
-  
+  .card:hover {
+    transform: translateY(-5px);
+  }
+  .card h2 {
+    margin-bottom: 10px;
+    color: #eee;
+  }
+  .card ul {
+    padding: 0;
+    margin: 0;
+    color: #ccc;
+  }
+  .card li {
+    margin-bottom: 5px;
+  }
+  /* Footer styles */
   footer {
     text-align: center;
-    padding: 10px;
-    background-color: #111;
-  color: #fff;
+    padding: 10px 0;
+    background-color: #222;
+    color: #ccc;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
   }
-  
+  /* Social icons styles */
+  .social-icons a {
+    color: #eee;
+    font-size: 24px;
+    margin-right: 10px;
+    transition: color 0.3s ease;
+  }
+  .social-icons a:hover {
+    color: #ccc;
+  }
+  /* Additional cards styles */
+  .additional-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  .additional-card {
+    flex: 0 1 calc(33.3% - 20px);
+    background-color: #333;
+    padding: 20px;
+    margin-bottom: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  .additional-card:hover {
+    transform: translateY(-5px);
+  }
+  .additional-card h2 {
+    margin-bottom: 10px;
+    color: #eee;
+  }
+  .additional-card p {
+    color: #ccc;
+  }
+  /* Image styles */
+  .card img,
+  .additional-card img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+  }
+  .card img:hover,
+  .additional-card img:hover {
+    transform: scale(1.05);
+  }
