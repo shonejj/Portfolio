@@ -1,181 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shone J - Portfolio</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
-<link rel="stylesheet" href="styles.css">
-<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
-</head>
-<body>
- 
-
-  <div class="hero">
-    <div class="hero-content">
-      <h1>Shone J</h1>
-      <p>Passionate and detail-oriented web developer with a knack for creating seamless, user-centric experiences. Armed with a strong foundation in HTML, CSS, and PHP, I thrive on transforming ideas into functional, visually appealing websites. Dedicated to staying on the cutting edge of technology, I bring a blend of creativity and technical prowess to every project.</p>
-      <div class="social-icons">
-        <a href="#" target="_blank"><i class="fas fa-envelope"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="#" target="_blank"><i class="fab fa-github"></i></a>
-        <!-- Add more social icons as needed -->
-      </div>
-    </div>
-  </div>
-  <main>
-      
-   
-    <section id="about" class="card">
-      <div>
-        <h2>About Me</h2>
-        <p>I am a passionate individual with a strong background in computer science and a keen interest in web designing and machine learning.</p>
-      </div>
-    </section>
-
-<div class="section2">
-    <section id="education" class="card">
-      <div>
-        <h2>Education</h2>
-        <ul>
-          <li>
-            B.E-Computer Science and Engineering<br>
-            MAM college of engineering and technology<br>
-            Anna university, 2022<br>
-          </li>
-          <!-- Add other educational qualifications -->
-        </ul>
-      </div>
-    </section>
-</div>
-
-  
-     <section id="projects" class="card">
-      <div>
-        <h2>Projects</h2>
-        <ul>
-          <li>
-            <p>
-            Topic: Communication application for medical sector(UG)<br>
-            Description: Developed an Android application for the medical <br>
-            community and students to interact in a forum and share study materials.<br>
-            Tools used: Java, HTML, CSS, JavaScript, PHP, MySQL
-            </p>
-          </li>
-          <li>
-            <p>
-              
-            </p>
-          </li>
-          <!-- Add other project details -->
-        </ul>
-      </div>
-    </section>
-    <section id="skills" class="card">
-        <div>
-          <h2>Skills</h2>
-          <ul>
-            <li>Programming languages: HTML, CSS, PHP, SQL</li>
-            <li>Technologies: Docker, GIT , Codeiginator4</li>
-            <!-- Add other skills -->
-          </ul>
-        </div>
-        <div class="code-editor">
-            <div class="window-controls">
-                <div class="window-button window-minimize"></div>
-                <div class="window-button window-maximize"></div>
-                <div class="window-button window-close"></div>
-            </div>
-            
-            <div class="side-nav">
-              <div class="file" onclick="openFile('index.html')">
-                <i class="fa-brands fa-html5"></i>
-                <span class="file-name">index.html</span>
-              </div>
-              <div class="file" onclick="openFile('style.css')">
-                <i class="fa-brands fa-css3-alt"></i>
-                <span class="file-name">style.css</span>
-              </div>
-              <div class="file" onclick="openFile('script.js')">
-                <i class="fa-brands fa-js"></i>
-                <span class="file-name">script.js</span>
-              </div>
-              <div class="file" onclick="openFile('home.php')">
-                <i class="fa-brands fa-php"></i>
-                <span class="file-name">home.php</span>
-              </div>
-              <div class="file" onclick="openFile('docker')">
-                <i class="fa-brands fa-docker"></i>
-                <span class="file-name">docker</span>
-              </div>
-              <div class="file" onclick="openFile('sql')">
-                <i class="fa-solid fa-code"></i>
-                <span class="file-name">Sql</span>
-              </div>
-              <div class="file" onclick="openFile('git')">
-                <i class="fa-brands fa-git"></i>
-                <span class="file-name">.GIT</span>
-              </div>
-            </div>
-            <div class="code-content">
-              <br>
-              <pre id="code-output" class="code-output"></pre>
-            </div>
-        </div>
-      </section>
-      <section id="contact" class="card">
-        <div>
-          <h2>contact</h2>
-          <p>I am a passionate individual with a strong background in computer science and a keen interest in web designing and machine learning.</p>
-        </div>
-      </section>
-  </main>
-
-  
-  <footer>
-    <p>&copy; 2023 Shone J - Portfolio</p>
-  </footer>
-  <script>
-    $(window).scroll(function(){
-      var scrollpos = $(this).scrollTop();
-      $(".hero-back").css({
-        'background-size' : 100 + scrollpos + '%' // Adjusted the background-size change on scroll
-      });
-    });
-  
-    let typingInterval;
-  
-    const files = {
-      'index.html': '<h1>Hello World</h1>',
-      'style.css': 'body::before{content: "Hello World";display: block;}',
-      'script.js': 'console.log(\'Hello World\');',
-      'docker': 'docker run hello-world',
-      'home.php': '<?php echo "Hello World"; ?>',
-      'sql': 'SELECT content FROM users WHERE content = "Hello World";',
-      'git': 'git add index.html && git commit -m "Hello World"'
-    };
-  
-    function typeText(text) {
-      let index = 0;
-      const codeElement = document.getElementById('code-output');
-      codeElement.textContent = ''; // Clear previous content
-      typingInterval = setInterval(function() {
-        codeElement.textContent += text[index];
-        index++;
-        if (index >= text.length) {
-          clearInterval(typingInterval);
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shone - PHP Backend Developer</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        .heroheight {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 600px; /* Adjust height as needed */
         }
-      }, 100);
-    }
-  
-    function openFile(fileName) {
-      if (typingInterval) {
-        clearInterval(typingInterval);
-      }
-      const fileContent = files[fileName] || 'File content not found';
-      typeText(fileContent);
-    }
-  </script>
-  
+        .card {
+            opacity: 0;
+            border-radius: 20px;
+            transform: translateY(50px);
+            transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+        }
+        .reveal {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-gray-200">
+    <div>
+        <div class="heroheight bg-blue-950 flex items-center justify-evenly gap-4 p-4 text-center text-white">
+            <div>
+                <h1 class="text-5xl font-bold">Hi, I'm Shone</h1>
+                <h2 class="text-2xl">PHP Backend Developer</h2>
+                <p class="text-lg mt-4">I build the backend of web apps using PHP. Experienced in CodeIgniter 4, OOP, PHP, MySQL, and Linux.</p>
+            </div>
+
+            <div>
+                <a href="https://github.com/shonejj" target="_blank">
+                <img src="https://avatars.githubusercontent.com/u/120367555?v=4" alt="Shone" class="w-30 h-30 rounded-full border-4 border-white shadow-md transition-transform transform duration-1000 hover:shadow-lg hover:z-20 hover:-translate-y-2">
+                </a>
+            </div>
+
+        </div>
+        <div id="about" class="bg-gray-800 py-10">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl font-bold mb-4">About Me</h2>
+                <p class="text-lg">I'm a PHP backend developer with a passion for crafting high-quality web applications. I have a strong foundation in backend technologies and I'm dedicated to writing clean, efficient, and secure code. My experience with frameworks like CodeIgniter 4 has allowed me to build scalable and performant web applications. I'm a quick learner and I enjoy staying up-to-date with the latest trends in web development. I'm looking for opportunities to work on exciting projects where I can leverage my skills to create innovative solutions.</p>
+            </div>
+        </div>
+        <div id="skills" class="bg-gray-800 py-10">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl font-bold mb-4">Skills</h2>
+                <ul class="flex flex-wrap gap-4">
+                    <li class="bg-blue-900 px-4 py-2 rounded-full transition ease-in-out delay-10 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-1000 transition-transform transform hover:shadow-lg hover:z-10 hover:-translate-y-2 ..."><i class="fas fa-code"></i> CodeIgniter 4</li>
+                    <li class="bg-blue-900 px-4 py-2 rounded-full transition ease-in-out delay-10 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-1000 transition-transform transform hover:shadow-lg hover:z-10 hover:-translate-y-2 ..."><i class="fab fa-php"></i> PHP</li>
+                    <li class="bg-blue-900 px-4 py-2 rounded-full transition ease-in-out delay-10 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-1000 transition-transform transform hover:shadow-lg hover:z-10 hover:-translate-y-2 ..."><i class="fas fa-object-group"></i> OOP</li>
+                    <li class="bg-blue-900 px-4 py-2 rounded-full transition ease-in-out delay-10 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-1000 transition-transform transform hover:shadow-lg hover:z-10 hover:-translate-y-2 ..."><i class="fas fa-database"></i> MySQL</li>
+                    <li class="bg-blue-900 px-4 py-2 rounded-full transition ease-in-out delay-10 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-1000 transition-transform transform hover:shadow-lg hover:z-10 hover:-translate-y-2 ..."><i class="fab fa-html5"></i> HTML</li>
+                    <li class="bg-blue-900 px-4 py-2 rounded-full transition ease-in-out delay-10 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-1000 transition-transform transform hover:shadow-lg hover:z-10 hover:-translate-y-2 ..."><i class="fab fa-css3-alt"></i> CSS</li>
+                    <li class="bg-blue-900 px-4 py-2 rounded-full transition ease-in-out delay-10 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-1000 transition-transform transform hover:shadow-lg hover:z-10 hover:-translate-y-2 ..."><i class="fab fa-js"></i> JavaScript</li>
+                    <li class="bg-blue-900 px-4 py-2 rounded-full transition ease-in-out delay-10 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-1000 transition-transform transform hover:shadow-lg hover:z-10 hover:-translate-y-2 ..."><i class="fab fa-linux"></i> Linux</li>
+                    <li class="bg-blue-900 px-4 py-2 rounded-full transition ease-in-out delay-10 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-1000 transition-transform transform hover:shadow-lg hover:z-10 hover:-translate-y-2 ..."><i class="fab fa-git"></i> Git</li>
+                    <li class="bg-blue-900 px-4 py-2 rounded-full transition ease-in-out delay-10 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-1000 transition-transform transform hover:shadow-lg hover:z-10 hover:-translate-y-2 ..."><i class="fab fa-docker"></i> Docker</li>
+                </ul>
+            </div>
+        </div>
+        <div id="experience" class="bg-gray-800 py-10">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl font-bold mb-4">Experience</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div class="card bg-gray-700 p-4 shadow-md">
+                        <h3 class="font-bold">Backend Developer</h3>
+                        <p>Acme Inc</p>
+                        <p class="text-sm text-gray-500">May 2021 - Present</p>
+                        <ul class="list-disc list-inside">
+                            <li>Developed and maintained web applications using PHP.</li>
+                            <li>Implemented backend logic and database interactions to support frontend features.</li>
+                            <li>Collaborated with frontend developers to integrate user-facing elements with server-side logic.</li>
+                        </ul>
+                    </div>
+                    <div class="card bg-gray-700 p-4 shadow-md">
+                        <h3 class="font-bold">Junior Developer</h3>
+                        <p>Beta Co</p>
+                        <p class="text-sm text-gray-500">Jan 2020 - Apr 2021</p>
+                        <ul class="list-disc list-inside">
+                            <li>Assisted in the development of web applications using CodeIgniter 4.</li>
+                            <li>Participated in code reviews and testing to ensure the quality of the software.</li>
+                            <li>Learned about software development best practices and gained practical experience in building web applications.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="education" class="bg-gray-800 py-10">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl font-bold mb-4">Education</h2>
+                <div class="card bg-gray-700 p-4 shadow-md">
+                    <h3 class="font-bold">Bachelor of Computer Science</h3>
+                    <p>University of Tech</p>
+                    <p class="text-sm text-gray-500">2017 - 2021</p>
+                    <ul class="list-disc list-inside">
+                        <li>Studied computer science and programming languages.</li>
+                        <li>Completed coursework in web development, database management, and software engineering.</li>
+                        <li>Participated in extracurricular activities such as hackathons and coding competitions.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="contact" class="bg-gray-800 py-10">
+            <div class="container mx-auto px-4">
+                <h2 class="text-2xl font-bold mb-4">Contact Me</h2>
+                <p class="text-lg">Ready to collaborate?</p>
+                <p><i class="fas fa-envelope"></i> Email: <a href="mailto:shonejj2k@gmail.com">shonejj2k@gmail.com</a></p>
+                <p><i class="fab fa-github"></i> GitHub:<a href="https://github.com/shonejj" target="_blank">@shonejj</a></p>
+                <p><i class="fab fa-linkedin"></i> LinkedIn:<a href="https://www.linkedin.com/in/shone-joy/" target="_blank"> @shone-joy</a></p>
+                <a href="Resume-Shone-Joy.pdf" download class="btn btn-primary"><i class="fas fa-download"></i> Download Resume</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        // Scroll reveal animation
+        window.addEventListener('scroll', reveal);
+
+        function reveal() {
+            var reveals = document.querySelectorAll('.card');
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var revealTop = reveals[i].getBoundingClientRect().top;
+                var revealPoint = 50;
+
+                if (revealTop < windowHeight - revealPoint) {
+                    reveals[i].classList.add('reveal');
+                }
+            }
+        }
+    </script>
 </body>
 </html>
