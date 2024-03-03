@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shone - PHP Backend Developer</title>
+    <title>Shone Joy - PHP Backend Developer</title>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://rsms.me/inter/inter.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
@@ -14,8 +14,19 @@
             background-position: center;
             background-repeat: no-repeat;
             background-size: cover;
-            height: 600px; /* Adjust height as needed */
+            height: 600px;
         }
+        @media screen and (max-width: 768px) {
+            .heroheight {
+               display: flex;
+               flex-direction: column-reverse;
+               justify-content: center;
+               align-items: center;
+               height: auto;
+            }
+            
+        }
+
         .card {
             opacity: 0;
             border-radius: 20px;
@@ -32,14 +43,14 @@
     <div>
         <div class="heroheight bg-blue-950 flex items-center justify-evenly gap-4 p-4 text-center text-white">
             <div>
-                <h1 class="text-5xl font-bold">Hi, I'm Shone</h1>
+                <h1 class="text-5xl font-bold">Hi, I'm Shone Joy</h1>
                 <h2 class="text-2xl">PHP Backend Developer</h2>
-                <p class="text-lg mt-4">I build the backend of web apps using PHP. Experienced in CodeIgniter 4, OOP, PHP, MySQL, and Linux.</p>
+                <p class="text-lg mt-4">Motivated Backend Developer with experience in building and maintaining web applications using PHP, MySQL, CodeIgniter 4, and JavaScript frameworks like Node.js.</p>
             </div>
 
             <div>
                 <a href="https://github.com/shonejj" target="_blank">
-                <img src="https://avatars.githubusercontent.com/u/120367555?v=4" alt="Shone" class="w-30 h-30 rounded-full border-4 border-white shadow-md transition-transform transform duration-1000 hover:shadow-lg hover:z-20 hover:-translate-y-2">
+                <img src="https://avatars.githubusercontent.com/u/120367555?v=4" alt="Shone Joy" class="w-30 h-30 rounded-full border-4 border-white shadow-md transition-transform transform duration-1000 hover:shadow-lg hover:z-20 hover:-translate-y-2">
                 </a>
             </div>
 
@@ -47,7 +58,7 @@
         <div id="about" class="bg-gray-800 py-10">
             <div class="container mx-auto px-4">
                 <h2 class="text-2xl font-bold mb-4">About Me</h2>
-                <p class="text-lg">I'm a PHP backend developer with a passion for crafting high-quality web applications. I have a strong foundation in backend technologies and I'm dedicated to writing clean, efficient, and secure code. My experience with frameworks like CodeIgniter 4 has allowed me to build scalable and performant web applications. I'm a quick learner and I enjoy staying up-to-date with the latest trends in web development. I'm looking for opportunities to work on exciting projects where I can leverage my skills to create innovative solutions.</p>
+                <p class="text-lg">I'm a motivated Backend Developer with over 1 year of experience building and maintaining web applications using PHP, MySQL, and object-oriented programming principles. I'm skilled in optimizing database queries, improving site performance, and developing SaaS software using JavaScript frameworks like Node.js and PHP CodeIgniter 4 to enhance SEO. I'm passionate about collaborating effectively with teams to deliver high-quality software solutions and committed to continuous learning and staying up-to-date with the latest technologies.</p>
             </div>
         </div>
         <div id="skills" class="bg-gray-800 py-10">
@@ -61,6 +72,7 @@
                     <li class="bg-blue-900 px-4 py-2 rounded-full transition ease-in-out delay-10 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-1000 transition-transform transform hover:shadow-lg hover:z-10 hover:-translate-y-2 ..."><i class="fab fa-html5"></i> HTML</li>
                     <li class="bg-blue-900 px-4 py-2 rounded-full transition ease-in-out delay-10 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-1000 transition-transform transform hover:shadow-lg hover:z-10 hover:-translate-y-2 ..."><i class="fab fa-css3-alt"></i> CSS</li>
                     <li class="bg-blue-900 px-4 py-2 rounded-full transition ease-in-out delay-10 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-1000 transition-transform transform hover:shadow-lg hover:z-10 hover:-translate-y-2 ..."><i class="fab fa-js"></i> JavaScript</li>
+                    <li class="bg-blue-900 px-4 py-2 rounded-full transition ease-in-out delay-10 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-1000 transition-transform transform hover:shadow-lg hover:z-10 hover:-translate-y-2 ..."><i class="fab fa-node-js"></i> Node.js</li>
                     <li class="bg-blue-900 px-4 py-2 rounded-full transition ease-in-out delay-10 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-1000 transition-transform transform hover:shadow-lg hover:z-10 hover:-translate-y-2 ..."><i class="fab fa-linux"></i> Linux</li>
                     <li class="bg-blue-900 px-4 py-2 rounded-full transition ease-in-out delay-10 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-1000 transition-transform transform hover:shadow-lg hover:z-10 hover:-translate-y-2 ..."><i class="fab fa-git"></i> Git</li>
                     <li class="bg-blue-900 px-4 py-2 rounded-full transition ease-in-out delay-10 bg-blue-500 hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-1000 transition-transform transform hover:shadow-lg hover:z-10 hover:-translate-y-2 ..."><i class="fab fa-docker"></i> Docker</li>
@@ -70,41 +82,32 @@
         <div id="experience" class="bg-gray-800 py-10">
             <div class="container mx-auto px-4">
                 <h2 class="text-2xl font-bold mb-4">Experience</h2>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <!-- <div class="grid grid-cols-1 md:grid-cols-2 gap-4"> -->
                     <div class="card bg-gray-700 p-4 shadow-md">
-                        <h3 class="font-bold">Backend Developer</h3>
-                        <p>Acme Inc</p>
-                        <p class="text-sm text-gray-500">May 2021 - Present</p>
+                        <h3 class="font-bold">Junior PHP Developer</h3>
+                        <p>Navabrind IT Solutions Pvt. Ltd</p>
+                        <p class="text-sm text-gray-500">Feb 2023 - Present</p>
                         <ul class="list-disc list-inside">
-                            <li>Developed and maintained web applications using PHP.</li>
-                            <li>Implemented backend logic and database interactions to support frontend features.</li>
-                            <li>Collaborated with frontend developers to integrate user-facing elements with server-side logic.</li>
+                            <li>Optimized database queries, improving site performance by 40%.</li>
+                            <li>Developed a SaaS software using PHP CodeIgniter 4 and JavaScript frameworks like Node.js to improve SEO, resulting in a 100% increase in the ability of crawlers to crawl and capture meta tags for JS-based frontend sites.</li>
+                            <li>Collaborated with cross-functional teams, including developers and designers, to ensure seamless integration and timely delivery of projects.</li>
+                            <li>Utilized Git for version control and contributed to the development of RESTful APIs.</li>
                         </ul>
                     </div>
-                    <div class="card bg-gray-700 p-4 shadow-md">
-                        <h3 class="font-bold">Junior Developer</h3>
-                        <p>Beta Co</p>
-                        <p class="text-sm text-gray-500">Jan 2020 - Apr 2021</p>
-                        <ul class="list-disc list-inside">
-                            <li>Assisted in the development of web applications using CodeIgniter 4.</li>
-                            <li>Participated in code reviews and testing to ensure the quality of the software.</li>
-                            <li>Learned about software development best practices and gained practical experience in building web applications.</li>
-                        </ul>
-                    </div>
-                </div>
+                <!-- </div> -->
             </div>
         </div>
         <div id="education" class="bg-gray-800 py-10">
             <div class="container mx-auto px-4">
                 <h2 class="text-2xl font-bold mb-4">Education</h2>
                 <div class="card bg-gray-700 p-4 shadow-md">
-                    <h3 class="font-bold">Bachelor of Computer Science</h3>
-                    <p>University of Tech</p>
-                    <p class="text-sm text-gray-500">2017 - 2021</p>
+                    <h3 class="font-bold">Bachelor of Engineering in Computer Science and Engineering</h3>
+                    <p>M.A.M College of Engineering and Technology, Trichy</p>
+                    <p class="text-sm text-gray-500">2018 - 2022</p>
                     <ul class="list-disc list-inside">
-                        <li>Studied computer science and programming languages.</li>
-                        <li>Completed coursework in web development, database management, and software engineering.</li>
-                        <li>Participated in extracurricular activities such as hackathons and coding competitions.</li>
+                        <li>Core Subjects: Data Structures, Algorithms, Operating Systems, Computer Networks, Database Management Systems.</li>
+                        <li>Relevant Coursework: Object-Oriented Programming, Web Development, Software Engineering.</li>
+                        <li>Final Year Project: Developed a web-based Hospital management platform using PHP and MySQL.</li>
                     </ul>
                 </div>
             </div>
@@ -114,9 +117,9 @@
                 <h2 class="text-2xl font-bold mb-4">Contact Me</h2>
                 <p class="text-lg">Ready to collaborate?</p>
                 <p><i class="fas fa-envelope"></i> Email: <a href="mailto:shonejj2k@gmail.com">shonejj2k@gmail.com</a></p>
-                <p><i class="fab fa-github"></i> GitHub:<a href="https://github.com/shonejj" target="_blank">@shonejj</a></p>
-                <p><i class="fab fa-linkedin"></i> LinkedIn:<a href="https://www.linkedin.com/in/shone-joy/" target="_blank"> @shone-joy</a></p>
-                <a href="Resume-Shone-Joy.pdf" download class="btn btn-primary"><i class="fas fa-download"></i> Download Resume</a>
+                <p><i class="fab fa-github"></i> GitHub: <a href="https://github.com/shonejj" target="_blank">@shonejj</a></p>
+                <p><i class="fab fa-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/shone-joy/" target="_blank">@shone-joy</a></p>
+                <a href="SHONE JOY.pdf" download class="btn btn-primary"><i class="fas fa-download"></i> Download Resume</a>
             </div>
         </div>
     </div>
